@@ -47,6 +47,13 @@ function addTask() {
     save();
 }
 addButton.onclick = addTask;
+function keyPressAddTask ({ keyCode }) {
+    if (keyCode === 13) {
+    addTask();
+    }
+    }
+    
+    inputTask.onkeypress = keyPressAddTask;
 
 function deleteTask() {
     var listItem = this.parentNode;
